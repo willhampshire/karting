@@ -39,6 +39,6 @@ pip install -r requirements.txt
 
 The below image is one of the generated visualisations, showing how each driver improved their fastest lap times across the heats.
 
-![example_image](https://github.com/willhampshire/karting/tree/master/graphs/fastest_catplot.png)
+![example_image](https://github.com/willhampshire/karting/blob/master/graphs/fastest_catplot.png)
 
 
