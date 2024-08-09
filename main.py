@@ -174,7 +174,7 @@ def plot_cat_graphs(heats_df: DF, cwd: str) -> None:
     plt.ylim(38, 44)
     plt.grid(True, which='both', axis='y')
     plt.title("Driver fastest lap time across different heats", pad=5)
-    plt.subplots_adjust(top=0.85, right=0.9)
+    plt.subplots_adjust(top=0.9, right=0.9)
     plt.legend(loc='upper right')
 
     plt.savefig(f'{cwd}/graphs/fastest_catplot.png', dpi=150)
@@ -253,9 +253,9 @@ def main() -> None:
     melted_heats_df = melted_heats_df.dropna(subset=['time'])
     melted_heats_df.to_csv(f"{cwd}/data/data_melted.csv")
 
-    #plot_cat_graphs(melted_heats_df, cwd)
-    #plot_single_graphs(melted_heats_df, cwd)
-    #plot_basic_graphs(melted_heats_df, cwd)
+    plot_cat_graphs(melted_heats_df, cwd)
+    plot_single_graphs(melted_heats_df, cwd)
+    plot_basic_graphs(melted_heats_df, cwd)
     plot_hist_graphs(melted_heats_df, cwd)
 
 
