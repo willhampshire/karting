@@ -11,6 +11,7 @@ Exploratory data analysis of TeamSport go karting times from my 3 heats, using s
 
 ## Installation
 
+Install Python 3.11.
 Pull the repository, and install the requried packages using `pip` or other:
 
 ```sh
