@@ -76,7 +76,7 @@ def plot_basic_graphs(heats_df: DF, cwd: str) -> None:
 
     # Add error bars manually using the standard deviations
     ax = g.facet_axis(0, 0)  # Get the axis object
-    ax.bar(laps_data.index, laps_data['time_seconds_min'], yerr=laps_data['time_seconds_stdev'], capsize=5)
+    ax.bar(laps_data.index, laps_data['time_seconds_min'])
 
     for ax in g.axes.flat:
         ax.grid(True, which='both', axis='y', linewidth=0.5)
@@ -89,7 +89,7 @@ def plot_basic_graphs(heats_df: DF, cwd: str) -> None:
         ax.annotate(f'{p.get_height():.3f}', (x, y),
                     ha='center', va='center', xytext=(0, 0), textcoords='offset points', fontsize=10, color='white')
 
-    plt.suptitle("Fastest lap times by each driver,\nerror bars show STDEV")
+    plt.title("Fastest lap times by each driver")
     plt.subplots_adjust(top=0.85, right=0.9, bottom=0.3)
     ticks = np.arange(0, 100, 5)
     plt.yticks(ticks)
